@@ -26,8 +26,10 @@ cmd({
     const botNumber = conn.user.id.split(":")[0] + '@s.whatsapp.net';
 
     if (m.mentionedJid.includes(botNumber)) {
-      const thumbnailRes = await axios.get(config.MENU_IMAGE_URL || https://files.catbox.moe/l8psgf.jpg", {
-        responseType: 'arraybuffer'
+      const thumbnailRes = await axios.get(
+    config.MENU_IMAGE_URL || "https://files.catbox.moe/l8pgsf.jpg",
+    { responseType: 'arraybuffer' }
+);
       });
       const thumbnailBuffer = Buffer.from(thumbnailRes.data, 'binary');
 
