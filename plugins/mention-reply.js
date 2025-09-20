@@ -27,10 +27,10 @@ cmd({
 
     if (m.mentionedJid.includes(botNumber)) {
       const thumbnailRes = await axios.get(
-    config.MENU_IMAGE_URL || "https://files.catbox.moe/l8pgsf.jpg",
-    { responseType: 'arraybuffer' }
-);
-      });
+        config.MENU_IMAGE_URL || "https://files.catbox.moe/l8pgsf.jpg",
+        { responseType: 'arraybuffer' }
+      );
+
       const thumbnailBuffer = Buffer.from(thumbnailRes.data, 'binary');
 
       await conn.sendMessage(m.chat, {
