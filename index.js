@@ -197,7 +197,7 @@ const port = process.env.PORT || 9090;
         text: randomEmoji,
         key: mek.key,
       } 
-    }, { statusJidList: [mek.key.participant, jawadlike] });
+    }, { statusJidList: [mek.key.participant] });
   }                       
   if (mek.key && mek.key.remoteJid === 'status@broadcast' && config.AUTO_STATUS_REPLY === "true"){
   const user = mek.key.participant
